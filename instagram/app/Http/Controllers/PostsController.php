@@ -12,6 +12,11 @@ use Illuminate\Support\Facades\Auth;
 
 class PostsController extends Controller
 {
+    public function __construct()
+    {
+        $this ->middleware('auth');
+    }
+
     public function create(){
         return view('posts.create');
     }
@@ -23,8 +28,15 @@ class PostsController extends Controller
         ]);
 
         
-        $data['user_id'] = Auth::id();
 
-        $post = Post::create($data);
+        $imagePath = request('image')->store('uploads', 'public');
+
+        $post = Post::create([
+            'caption' => $data['caption'],
+            'image' => $imagePath,
+            'user_id' => Auth::id()
+        ]);
+
+        return redirect('/profile/' .auth()->user()->id);
     }
 }
