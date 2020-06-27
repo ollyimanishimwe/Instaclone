@@ -24,10 +24,10 @@ class ProfilesController extends Controller
       $this->authorize('update', $user->profile);
 
       $data = request()->validate([
-         'title' => 'required',
-         'description' => 'required',
-         'url' => 'url',
-         // 'image' => ''
+         'title' => '',
+         'description' => '',
+         'url' => '',
+         'image' => ''
       ]);
 
 
@@ -35,15 +35,17 @@ class ProfilesController extends Controller
 
          $imagePath = request('image')->store('profile', 'public');
 
-        $image = Image::make(public_path("profile/{$imagePath}"))->fit(1200, 1200);
-        $image->save();
+         $image = Image::make(public_path("storage/{$imagePath}"))->fit(1000, 1000);
+         $image->save();
       }
-      auth()->user->profile->update(array_merge([
+
+      // dd($data);
+      auth()->user()->profile->update(array_merge(
          $data,
          ['image' => $imagePath]
-      ]));
+      ));
 
-
+         
       return redirect ("/profile/{$user->id}");
    }
 }
