@@ -29,7 +29,7 @@ class ProfilesController extends Controller
          'title' => '',
          'description' => '',
          'url' => '',
-         'image' => ''
+         'image' => '' 
       ]);
 
 
