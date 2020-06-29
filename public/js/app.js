@@ -1915,8 +1915,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['userId'],
   mounted: function mounted() {
     console.log('Component mounted.');
+  },
+  methods: {
+    followUser: function followUser() {
+      axios.post('/follow/' + this.userId).then(function (response) {
+        alert(response.data);
+      });
+    }
   }
 });
 
@@ -37468,11 +37476,8 @@ var render = function() {
   return _c("div", { staticClass: "container" }, [
     _c(
       "button",
-      {
-        staticClass: "btn btn-primary ml-4",
-        on: { click: function($event) {} }
-      },
-      [_vm._v("follow")]
+      { staticClass: "btn btn-primary ml-4", on: { click: _vm.followUser } },
+      [_vm._v("Follow")]
     )
   ])
 }
@@ -49670,7 +49675,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('follow-btn', __webpack_require__(/*! ./components/FollowButton.vue */ "./resources/js/components/FollowButton.vue")["default"]);
+Vue.component('follow-button', __webpack_require__(/*! ./components/FollowButton.vue */ "./resources/js/components/FollowButton.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
