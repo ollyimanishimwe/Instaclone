@@ -6,17 +6,23 @@
 
 <script>
     export default {
-        props: ['userId'],
+        props: ['userId', 'follows'],
 
         mounted() {
             console.log('Component mounted.')
         },
 
+        data: function (){
+            return{
+                status: this.follow,
+            }
+        }
+
         methods: {
             followUser() {
                 axios.post('/follow/' + this.userId)
                     .then(response => {
-                        alert(response.data);
+                        console.log(response.data);
                     });
             }
         }

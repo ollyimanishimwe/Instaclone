@@ -1904,29 +1904,9 @@ module.exports = {
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FollowButton.vue?vue&type=script&lang=js& ***!
   \***********************************************************************************************************************************************************************/
 /*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['userId'],
-  mounted: function mounted() {
-    console.log('Component mounted.');
-  },
-  methods: {
-    followUser: function followUser() {
-      axios.post('/follow/' + this.userId).then(function (response) {
-        alert(response.data);
-      });
-    }
-  }
-});
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Volumes/Disk Two/Coding Projects/Insta/resources/js/components/FollowButton.vue: Unexpected token, expected \",\" (21:4)\n\n\u001b[0m \u001b[90m 19 | \u001b[39m    }\u001b[0m\n\u001b[0m \u001b[90m 20 | \u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 | \u001b[39m    methods\u001b[33m:\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 | \u001b[39m        followUser() {\u001b[0m\n\u001b[0m \u001b[90m 23 | \u001b[39m            axios\u001b[33m.\u001b[39mpost(\u001b[32m'/follow/'\u001b[39m \u001b[33m+\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39muserId)\u001b[0m\n\u001b[0m \u001b[90m 24 | \u001b[39m                \u001b[33m.\u001b[39mthen(response \u001b[33m=>\u001b[39m {\u001b[0m\n    at Parser._raise (/Volumes/Disk Two/Coding Projects/Insta/node_modules/@babel/parser/lib/index.js:754:17)\n    at Parser.raiseWithData (/Volumes/Disk Two/Coding Projects/Insta/node_modules/@babel/parser/lib/index.js:747:17)\n    at Parser.raise (/Volumes/Disk Two/Coding Projects/Insta/node_modules/@babel/parser/lib/index.js:741:17)\n    at Parser.unexpected (/Volumes/Disk Two/Coding Projects/Insta/node_modules/@babel/parser/lib/index.js:8844:16)\n    at Parser.expect (/Volumes/Disk Two/Coding Projects/Insta/node_modules/@babel/parser/lib/index.js:8830:28)\n    at Parser.parseObj (/Volumes/Disk Two/Coding Projects/Insta/node_modules/@babel/parser/lib/index.js:10476:14)\n    at Parser.parseExprAtom (/Volumes/Disk Two/Coding Projects/Insta/node_modules/@babel/parser/lib/index.js:10092:28)\n    at Parser.parseExprSubscripts (/Volumes/Disk Two/Coding Projects/Insta/node_modules/@babel/parser/lib/index.js:9693:23)\n    at Parser.parseMaybeUnary (/Volumes/Disk Two/Coding Projects/Insta/node_modules/@babel/parser/lib/index.js:9673:21)\n    at Parser.parseExprOps (/Volumes/Disk Two/Coding Projects/Insta/node_modules/@babel/parser/lib/index.js:9543:23)\n    at Parser.parseMaybeConditional (/Volumes/Disk Two/Coding Projects/Insta/node_modules/@babel/parser/lib/index.js:9516:23)\n    at Parser.parseMaybeAssign (/Volumes/Disk Two/Coding Projects/Insta/node_modules/@babel/parser/lib/index.js:9471:21)\n    at Parser.parseExportDefaultExpression (/Volumes/Disk Two/Coding Projects/Insta/node_modules/@babel/parser/lib/index.js:12395:24)\n    at Parser.parseExport (/Volumes/Disk Two/Coding Projects/Insta/node_modules/@babel/parser/lib/index.js:12297:31)\n    at Parser.parseStatementContent (/Volumes/Disk Two/Coding Projects/Insta/node_modules/@babel/parser/lib/index.js:11297:27)\n    at Parser.parseStatement (/Volumes/Disk Two/Coding Projects/Insta/node_modules/@babel/parser/lib/index.js:11193:17)\n    at Parser.parseBlockOrModuleBlockBody (/Volumes/Disk Two/Coding Projects/Insta/node_modules/@babel/parser/lib/index.js:11768:25)\n    at Parser.parseBlockBody (/Volumes/Disk Two/Coding Projects/Insta/node_modules/@babel/parser/lib/index.js:11754:10)\n    at Parser.parseTopLevel (/Volumes/Disk Two/Coding Projects/Insta/node_modules/@babel/parser/lib/index.js:11124:10)\n    at Parser.parse (/Volumes/Disk Two/Coding Projects/Insta/node_modules/@babel/parser/lib/index.js:12826:10)\n    at parse (/Volumes/Disk Two/Coding Projects/Insta/node_modules/@babel/parser/lib/index.js:12879:38)\n    at parser (/Volumes/Disk Two/Coding Projects/Insta/node_modules/@babel/core/lib/parser/index.js:54:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (/Volumes/Disk Two/Coding Projects/Insta/node_modules/@babel/core/lib/transformation/normalize-file.js:93:38)\n    at normalizeFile.next (<anonymous>)\n    at run (/Volumes/Disk Two/Coding Projects/Insta/node_modules/@babel/core/lib/transformation/index.js:31:50)\n    at run.next (<anonymous>)\n    at Function.transform (/Volumes/Disk Two/Coding Projects/Insta/node_modules/@babel/core/lib/transform.js:27:41)\n    at transform.next (<anonymous>)\n    at step (/Volumes/Disk Two/Coding Projects/Insta/node_modules/gensync/index.js:254:32)\n    at /Volumes/Disk Two/Coding Projects/Insta/node_modules/gensync/index.js:266:13\n    at async.call.result.err.err (/Volumes/Disk Two/Coding Projects/Insta/node_modules/gensync/index.js:216:11)");
 
 /***/ }),
 
