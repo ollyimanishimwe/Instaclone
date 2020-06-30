@@ -1,12 +1,13 @@
 <?php
 
 namespace App;
+// namespace App\Mail;;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use App\Mail\NewUserWelcomeMail;
-use App\Mail;
+use Illuminate\Support\Facades\Mail;
 
 class User extends Authenticatable
 {
@@ -46,8 +47,9 @@ class User extends Authenticatable
             $user->profile()->create([
                 'title' => $user->username,
             ]);
+            
+            Mail::to($user->email)->send(new NewUserWelcomeMail());
 
-        Mail::to($user->email)->send(new NewUserWelcomeMail());
         });
     }
     public function posts(){
